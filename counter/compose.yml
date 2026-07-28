@@ -1,0 +1,15 @@
+services:
+  visitor-counter:
+    build: .
+    container_name: uchumeow-visitor-counter
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8098:8000"
+    environment:
+      DATABASE_PATH: /data/visitors.db
+      ALLOWED_ORIGINS: https://uchumeow.github.io
+    volumes:
+      - visitor-data:/data
+
+volumes:
+  visitor-data:

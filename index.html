@@ -1,143 +1,163 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" href="/site/favicon.ico">
-<title>uchumeow</title>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="uchumeow's personal corner of the internet: projects, experiments, and cool computer stuff.">
+    <title>uchumeow | personal homepage</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+    <script src="config.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="site-shell" id="top">
+      <div class="page-frame">
+        <div class="ticker" aria-label="Welcome message">
+          <div class="ticker-track">
+            <span>★ welcome to uchumeow's corner of the internet ★</span>
+            <span aria-hidden="true">★ welcome to uchumeow's corner of the internet ★</span>
+          </div>
+        </div>
 
-<style>
-body {
-  margin: 0;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: radial-gradient(circle at top, #1a1a2e, #0b0b12);
-  font-family: Arial, sans-serif;
-  color: #f4f4f4;
-  overflow: hidden;
-}
+        <header class="hero">
+          <div class="hero-sparkles" aria-hidden="true">
+            <span>✦</span>
+            <span>✧</span>
+            <span>✦</span>
+          </div>
+          <p class="eyebrow">personal homepage v2.0</p>
+          <h1>uchumeow</h1>
+          <p class="hero-copy">self engineer, linux user, and professional button-pusher</p>
+          <nav aria-label="Main navigation">
+            <a href="#top">home</a>
+            <a href="#about">about</a>
+            <a href="#projects">projects</a>
+            <a href="https://github.com/uchumeow">github</a>
+          </nav>
+        </header>
 
-.glow {
-  position: absolute;
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(180,120,255,0.2), transparent 60%);
-  filter: blur(40px);
-  animation: float 6s ease-in-out infinite;
-}
+        <div class="content-grid">
+          <aside class="sidebar">
+            <section class="window profile-window">
+              <div class="window-title">
+                <span>profile.txt</span>
+                <span class="window-buttons" aria-hidden="true">_ □ ×</span>
+              </div>
+              <div class="window-body">
+                <div class="avatar" aria-label="Pixel cat avatar">
+                  <span aria-hidden="true">/\_/\</span>
+                  <span aria-hidden="true">( o.o )</span>
+                  <span aria-hidden="true">&gt; ^ &lt;</span>
+                </div>
+                <h2>uchumeow</h2>
+                <p class="tiny-copy">@uchumeow · he/they · somewhere on the internet</p>
+                <div class="status">
+                  <span class="status-light"></span>
+                  currently online
+                </div>
+              </div>
+            </section>
 
-@keyframes float {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-20px); }
-  100% { transform: translateY(0px); }
-}
+            <section class="window">
+              <div class="window-title">
+                <span>interests</span>
+              </div>
+              <div class="window-body">
+                <ul class="interest-list">
+                  <li>linux</li>
+                  <li>self-hosting</li>
+                  <li>virtual reality</li>
+                  <li>retro hardware</li>
+                  <li>making weird stuff</li>
+                </ul>
+              </div>
+            </section>
 
-.card {
-  position: relative;
-  background: rgba(20, 20, 35, 0.7);
-  border: 1px solid rgba(180, 120, 255, 0.25);
-  backdrop-filter: blur(10px);
-  border-radius: 18px;
-  padding: 28px;
-  width: 90%;
-  max-width: 420px;
-  box-shadow: 0 0 40px rgba(180, 120, 255, 0.15);
-}
+            <section class="window">
+              <div class="window-title">
+                <span>web stats</span>
+              </div>
+              <div class="window-body stats">
+                <p>visitors: <span class="counter" id="visitor-count" title="Counted once per browser">------</span></p>
+                <p>updated: 07.28.2026</p>
+                <p>mood: creating</p>
+              </div>
+            </section>
+          </aside>
 
-h1 {
-  margin: 0;
-  font-size: 26px;
-  text-align: center;
-}
+          <div class="main-column">
+            <section class="window welcome-window" id="about">
+              <div class="window-title">
+                <span>welcome.html</span>
+                <span class="window-buttons" aria-hidden="true">_ □ ×</span>
+              </div>
+              <div class="window-body">
+                <p class="welcome-heading"><span aria-hidden="true">★</span> hey, i'm uchumeow!</p>
+                <p>i like taking computers apart, running things on hardware they probably weren't meant for, and building tools that make my own little corner of the internet better.</p>
+                <p>this site is where i keep my projects, experiments, and whatever else i'm working on.</p>
+                <div class="under-construction">
+                  <span aria-hidden="true">⚠</span>
+                  this website is permanently under construction
+                  <span aria-hidden="true">⚠</span>
+                </div>
+              </div>
+            </section>
 
-.sub {
-  text-align: center;
-  color: #b48cff;
-  margin-top: 6px;
-  margin-bottom: 20px;
-  font-size: 14px;
-}
+            <section class="window" id="projects">
+              <div class="window-title">
+                <span>cool_projects.zip</span>
+                <span class="window-buttons" aria-hidden="true">_ □ ×</span>
+              </div>
+              <div class="window-body">
+                <div class="section-intro">
+                  <div>
+                    <p class="section-kicker">selected files</p>
+                    <h2>github projects</h2>
+                  </div>
+                  <a class="view-all" href="https://github.com/uchumeow">view all →</a>
+                </div>
 
-.section {
-  margin-top: 16px;
-}
+                <div class="project-grid">
+                  <a class="project-card" href="https://github.com/uchumeow/Tunez-3DS">
+                    <span class="project-icon" aria-hidden="true">♫</span>
+                    <span class="project-details">
+                      <span class="project-name">Tunez-3DS</span>
+                      <span class="project-description">a simple glass-themed mp3 player made for the nintendo 3ds.</span>
+                      <span class="project-language"><span class="language-dot"></span>HTML</span>
+                    </span>
+                  </a>
 
-.title {
-  font-size: 14px;
-  color: #b48cff;
-  margin-bottom: 6px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
+                  <a class="project-card" href="https://github.com/uchumeow/amusic-dl">
+                    <span class="project-icon" aria-hidden="true">↓</span>
+                    <span class="project-details">
+                      <span class="project-name">amusic-dl</span>
+                      <span class="project-description">one of my music tools for grabbing and organizing audio.</span>
+                      <span class="project-language"><span class="language-dot"></span>Python</span>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </section>
 
-.text {
-  font-size: 14px;
-  opacity: 0.9;
-  line-height: 1.4;
-}
+            <section class="link-zone" aria-label="Web badges">
+              <span class="badge badge-linux">made with linux</span>
+              <span class="badge badge-pixel">pixel powered</span>
+              <span class="badge badge-web">the web is yours</span>
+              <span class="badge badge-best">best viewed at 1024×768</span>
+            </section>
+          </div>
+        </div>
 
-.badges {
-  margin-top: 10px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-}
-
-.badge {
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(180,120,255,0.2);
-  padding: 5px 10px;
-  border-radius: 999px;
-  font-size: 12px;
-}
-
-.footer {
-  margin-top: 18px;
-  text-align: center;
-  font-size: 11px;
-  opacity: 0.5;
-}
-</style>
-
-</head>
-
-<body>
-
-<div class="glow"></div>
-
-<div class="card">
-
-<h1>🐾 uchu :3 🐾</h1>
-<div class="sub">he/they</div>
-
-<div class="section">
-<div class="title">about</div>
-<div class="text">
-just building crap on the internet
-</div>
-</div>
-
-<div class="section">
-<div class="title">bio</div>
-<div class="text">
-i LOVEEEE my girlfriend :PPP<br>
-IM A PROUD FURRY FEMBOY :3<br>
-femtanyl + stomach book top 1 artists fr<br>
-</div>
-</div>
-
-<div class="section">
-<div class="title">discord:</div> 
-<div class="badge">uchumeow</div>
-</div>
-
-<div class="footer">
-made on arch (btw)
-</div>
-
-</div>
-
-</body>
+        <footer>
+          <p>© 2026 uchumeow · handcrafted for the world wide web</p>
+          <p class="footer-links">
+            <a href="#top">top</a>
+            <span>·</span>
+            <a href="https://github.com/uchumeow">github</a>
+          </p>
+        </footer>
+      </div>
+    </main>
+  </body>
 </html>
